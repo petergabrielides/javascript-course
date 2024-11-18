@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      7g
+    </title>
+  </head>
+  <body>
+    <script>
+      function convertLength (length, unit1, unit2) {
+        if ((unit1 === 'miles') && (unit2 === 'km')) {
+          const lengthCalculated = length * 1.6;
+          return (`${lengthCalculated} ${unit2}`);
+        } else if ((unit1 === 'km') && (unit2 === 'miles')) {
+          const lengthCalculated = length / 1.6;
+          return (`${lengthCalculated} ${unit2}`)
+        } else if (unit1 === unit2) {
+          return (`${length} ${unit1}`);
+        }
+      }
+
+      console.log(convertLength (50, 'miles', 'km'));
+      console.log(convertLength (32, 'km', 'miles'));
+      console.log(convertLength (50, 'km', 'km'));
+    </script> 
+  </body>
+</html>
